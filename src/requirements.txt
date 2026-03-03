@@ -1,0 +1,4 @@
+pyyaml
+pypresence
+requests
+beautifulsoup4
