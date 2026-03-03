@@ -4,15 +4,21 @@
 ![Rich Presence Example](https://i.imgur.com/U9ys13R.png)  
     
 ## System Requirements  
- -   [Google Chrome](https://www.google.com/chrome/index.html)
- - [Python 3](https://www.python.org/downloads/)
+ - [Google Chrome](https://www.google.com/chrome/index.html)
+ - [Python 3](https://www.python.org/downloads/) (Manual installation only)
+ - [Discord Desktop](https://discord.com/download) (Web will not work)
  
-## Quick Start    
+## Quick Start
+**Manual**
  - Download and unzip this repository  
  - Navigate to `/src` in your terminal / command prompt  
  - Install requirements with `pip install -r requriements.txt`  
  - Run the program `python main.py`  
-  
+ 
+**Automatic**
+ - [Download](https://github.com/TPD94/PornHubRichPresence/releases/download/win-x64/PHRichPresence.exe) the windows release
+ - Run and watch!
+
   
   ### Begin watching!  
   A chrome debug window will open automatically to pornhub, just begin watching and your rich presence should now update with whatever video you choose to watch! Now your friends can get some inspiration too! When (your) finished browsing and watching simply close the wimdow and your rich presence will be cleared and the script will stop.  
