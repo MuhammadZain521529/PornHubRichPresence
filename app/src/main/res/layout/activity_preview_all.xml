@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.muhammadzain.mzkwallpaper.Activities.PreviewAllActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintTop_toTopOf="@id/main"
+        android:background="@drawable/background"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main">
+
+
+        <TextView
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorWhite"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:text="@string/google.com"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:minLines="2"
+            android:onClick="Link_Click"
+            android:gravity="center"
+            android:lines="2"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:maxLines="2"
+            android:textSize="@dimen/_8ssp"
+            android:id="@+id/text_photo"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/ic_back_click"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_back"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/photoviewall"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/photoviewall"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/photoviewall"
+        app:layout_constraintTop_toTopOf="@id/photoviewall"
+        app:layout_constraintBottom_toBottomOf="@id/photoviewall"
+        android:id="@+id/progress_preview"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/background"
+        app:layout_constraintStart_toStartOf="@id/photoviewall"
+        app:layout_constraintEnd_toEndOf="@id/photoviewall"
+        app:layout_constraintBottom_toBottomOf="@id/photoviewall"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_download"
+            android:id="@+id/download_image"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintStart_toEndOf="@id/set_as_image"
+            app:layout_constraintEnd_toStartOf="@id/share_image"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/white"/>
+
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/set_as_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="@dimen/_25sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/download_image"
+            android:src="@drawable/ic_set_as"
+            android:background="@android:color/transparent"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_share"
+            android:id="@+id/share_image"
+            android:layout_marginBottom="@dimen/_25sdp"
+            app:layout_constraintStart_toEndOf="@id/download_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@android:color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

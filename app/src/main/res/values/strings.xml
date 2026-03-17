@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">MZK Wallpaper</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setwallpaper">Set Wallpaper</string>
+    <string name="search">Search</string>
+    <string name="all">All</string>
+    <string name="downloadlow">Low Quality</string>
+    <string name="downloadmedium">Medium Quality</string>
+    <string name="downloadhigh">High Quality</string>
+    <string name="random">Random</string>
+    <string name="both">Both</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="lockscreen">Lock Screen</string>
+    <string name="setaswallpaper">Set As Wallpaper</string>
+    <string name="google.com">www.google.com</string>
+    <string name="home">Home</string>
+    <string name="privacy_click">Privacy Policy</string>
+    <string name="rate">Rate</string>
+    <string name="share">Share App</string>
+    <string name="nointernet">! No Internet</string>
+<!--this is test ids-->
+    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+
+<!--&lt;!&ndash;this is orignal&ndash;&gt;-->
+<!--    <string name="app_id">ca-app-pub-4675301390533499~2088426346</string>-->
+<!--    <string name="banner_ad_id">ca-app-pub-4675301390533499/2689812138</string>-->
+<!--    <string name="interstitial_ad_id">ca-app-pub-3940256099942544/1033173712</string>-->
+
+
+</resources>

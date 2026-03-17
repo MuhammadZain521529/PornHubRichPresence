@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    android:background="#252323"
+    tools:context="com.muhammadzain.mzkwallpaper.Activities.ImageActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#252323">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/maintoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#252323"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:menu="@menu/menu_all_images" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_33sdp"
+            android:background="#252323"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/swiperefresh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/maintoolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/all_click"
+                    android:text="@string/all"
+                    style="@style/category_button_style"
+                    />
+
+                <Button
+                    android:id="@+id/wild_click"
+                    style="@style/category_button_style"
+                    android:text="Wild"
+                    />
+
+                <Button
+                    android:id="@+id/snow_click"
+                    style="@style/category_button_style"
+                    android:text="Snow"
+                    />
+
+                <Button
+                    android:id="@+id/love_click"
+                    style="@style/category_button_style"
+                    android:text="4K"
+                    />
+                <Button
+                    android:id="@+id/ocean_click"
+                    style="@style/category_button_style"
+                    android:text="Ocean"
+                    />
+
+                <Button
+                    android:id="@+id/mountain_click"
+                    style="@style/category_button_style"
+                    android:text="Mountain"
+                    />
+
+                <Button
+                    android:id="@+id/dark_click"
+                    style="@style/category_button_style"
+                    android:text="Dark"
+                    />
+
+
+                <Button
+                    android:id="@+id/nature_click"
+                    style="@style/category_button_style"
+                    android:text="Nature"
+                    />
+
+                <Button
+                    android:id="@+id/amazing_click"
+                    style="@style/category_button_style"
+                    android:text="Amazing"
+                    />
+
+                <Button
+                    android:id="@+id/cool_click"
+                    style="@style/category_button_style"
+                    android:text="Cool" />
+
+
+                <Button
+                    android:id="@+id/abstract_click"
+                    style="@style/category_button_style"
+                    android:text="Abstract"
+                    />
+                <Button
+                    style="@style/category_button_style"
+                    android:id="@+id/galaxy_click"
+                    android:text="Galaxy"/>
+                <Button
+                    style="@style/category_button_style"
+                    android:id="@+id/flower_click"
+                    android:text="Flower"/>
+
+
+
+                <Button
+                    android:id="@+id/animal_click"
+                    android:text="Animals"
+                    style="@style/category_button_style"/>
+
+
+
+
+                <Button
+                    android:id="@+id/building_click"
+                    android:text="Buildings"
+                    style="@style/category_button_style"/>
+
+                <Button
+                    android:id="@+id/cars_click"
+                    android:text="Cars"
+                    style="@style/category_button_style" />
+
+                <Button
+                    android:id="@+id/bike_click"
+                    style="@style/category_button_style"
+                    android:text="Bikes"
+                    />
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_35sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_scroll_view">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_main"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent" />
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_internet"
+            android:id="@+id/no_internet_iv"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="@id/swiperefresh"
+            app:layout_constraintEnd_toEndOf="@id/swiperefresh"
+            app:layout_constraintTop_toTopOf="@id/swiperefresh"
+            app:layout_constraintBottom_toBottomOf="@id/swiperefresh"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nointernet"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/no_internet_iv"
+            app:layout_constraintStart_toStartOf="@id/no_internet_iv"
+            app:layout_constraintEnd_toEndOf="@id/no_internet_iv"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_20ssp"
+            android:fontFamily="casual"
+            android:id="@+id/no_internet_tv"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/no_internet_tv"
+            app:layout_constraintStart_toStartOf="@id/no_internet_tv"
+            app:layout_constraintEnd_toEndOf="@id/no_internet_tv"
+            android:background="@drawable/button_bg_pressed"
+            android:text="Retry"
+            android:visibility="gone"
+            android:textColor="@color/text_color_pressed"
+            android:id="@+id/retry"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/swiperefresh"
+            app:layout_constraintStart_toStartOf="@id/swiperefresh"
+            app:layout_constraintEnd_toEndOf="@id/swiperefresh"
+            android:layout_margin="@dimen/_30sdp"
+            android:background="@drawable/button_bg_pressed"
+            android:id="@+id/load_more_click"
+            android:visibility="gone"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/text_color_pressed"
+            android:text="Load More..."/>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/banner_container"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/swiperefresh"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            />-->
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:layout_constraintTop_toBottomOf="@id/swiperefresh"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_id">
+        </com.google.android.gms.ads.AdView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:theme="@style/Widget.AppCompat.DrawerArrowToggle"
+        android:id="@+id/navigation_view"
+        app:headerLayout="@layout/header_drawer"
+        app:menu="@menu/drawer_menu"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
